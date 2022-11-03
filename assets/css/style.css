@@ -1,0 +1,153 @@
+.conteudo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.conteudo p {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 450px;
+  line-height: 30px;
+}
+
+.conteudo img {
+  width: 50%;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+  background-color: #003840;
+  color: #f88f06;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.produtos-ios p,
+span {
+  width: 300px;
+  text-align: center;
+}
+
+.produtos-ios img {
+  width: 15%;
+}
+
+.produtos-android img {
+  width: 12%;
+}
+
+.produtos-ios {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  line-height: 30px;
+  gap: 1rem;
+}
+
+.produtos-android {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 30px;
+  gap: 3rem;
+}
+
+button {
+  margin-top: 50px;
+  background: #f88f06;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: ease-in-out 0.4s;
+  color: white;
+}
+
+button:hover {
+  background: #003840;
+  color: white;
+}
+
+article {
+  height: 50vh;
+}
+
+article p {
+  font-size: 2rem;
+}
+
+article span {
+  color: #003840;
+  background-color: #f88f06;
+  font-size: 2em;
+}
+
+.area-de-envio {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+
+#email {
+  border-radius: 10px;
+  outline: #003840;
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  line-height: 0;
+  font-size: 1.5rem;
+}
+
+form button {
+  border-radius: 10px;
+  outline: #003840;
+  padding: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  line-height: 0;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .conteudo p {
+    text-align: center;
+    font-size: 1.6rem;
+    width: 400px;
+  }
+  .conteudo img {
+    width: 70%;
+  }
+  .produtos-ios {
+    display: flex;
+    flex-direction: column;
+  }
+  .produtos-ios img {
+    width: 60%;
+  }
+  .produtos-android img {
+    width: 60%;
+  }
+  .produtos-android {
+    display: flex;
+    flex-direction: column;
+  }
+  .sobre p {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .suporte {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 1024px) {
+}
