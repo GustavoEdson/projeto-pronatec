@@ -6,6 +6,16 @@
   height: 80vh;
 }
 
+.carro {
+  display: flex;
+  justify-content: center;
+}
+
+#carouselExampleCaptions {
+  display: flex;
+  align-items: center;
+}
+
 .conteudo p {
   text-align: center;
   font-size: 1.2rem;
@@ -16,7 +26,6 @@
 
 .conteudo img {
   width: 50%;
-  border-radius: 10px;
 }
 
 h1 {
@@ -35,33 +44,27 @@ span {
   text-align: center;
 }
 
-.produtos-ios img {
-  width: 15%;
-}
-
-.produtos-android img {
-  width: 12%;
-}
-
 .produtos-ios {
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
-  align-items: center;
-  line-height: 30px;
-  gap: 1rem;
+  justify-content: space-around;
+  /* line-height: 30px; */
+}
+
+.produtos-ios img {
+  width: 7%;
 }
 
 .produtos-android {
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 30px;
-  gap: 3rem;
+  justify-content: space-around;
+  /* line-height: 30px; */
+  /* gap: 1rem; */
 }
 
-button {
-  margin-top: 50px;
+.produtos-android button,
+.produtos-ios button {
   background: #f88f06;
   border: none;
   border-radius: 5px;
@@ -72,17 +75,18 @@ button {
   color: white;
 }
 
-button:hover {
+.produtos-android button:hover,
+.produtos-ios button:hover {
   background: #003840;
   color: white;
 }
 
 article {
-  height: 50vh;
+  height: 43vh;
 }
 
 article p {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 article span {
@@ -91,21 +95,85 @@ article span {
   font-size: 2em;
 }
 
+/* Animação da logo */
+.image-float img {
+  width: 250px;
+  position: relative;
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+  0% {
+    top: 0px;
+  }
+  25% {
+    top: 50px;
+  }
+  75% {
+    top: 100px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.sobre {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.sobre p {
+  text-align: center;
+  font-size: 1.2rem;
+  width: 600px;
+}
+
+.sobre-texto p:hover {
+}
+
+.suporte {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .area-de-envio {
+  text-align: center;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   font-size: 1.5rem;
+  border-radius: 10px;
+  padding: 10px;
+  width: 640px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  transition: all 0.5s;
+}
+
+.area-de-envio button {
+  margin-top: 10px;
+}
+
+.area-de-envio:hover {
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.528);
 }
 
 #email {
   border-radius: 10px;
-  outline: #003840;
   padding: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
+  width: 500px;
   line-height: 0;
   font-size: 1.5rem;
+}
+
+input[type="text"] {
+  height: 200px;
+  width: 500px;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 form button {
@@ -118,7 +186,8 @@ form button {
   font-size: 1.5rem;
 }
 
-@media only screen and (max-width: 600px) {
+/* Responsivo */
+@media only screen and (max-width: 717px) {
   .conteudo p {
     text-align: center;
     font-size: 1.6rem;
@@ -130,6 +199,7 @@ form button {
   .produtos-ios {
     display: flex;
     flex-direction: column;
+    align-items: space-around;
   }
   .produtos-ios img {
     width: 60%;
@@ -141,13 +211,72 @@ form button {
     display: flex;
     flex-direction: column;
   }
+  .image-float img {
+    width: 80px;
+    position: relative;
+    animation: mymove 5s infinite;
+  }
+
+  @keyframes mymove {
+    0% {
+      left: 0px;
+    }
+    25% {
+      left: 50px;
+    }
+    75% {
+      left: 100px;
+    }
+    100% {
+      left: 0px;
+    }
+  }
+  .sobre {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 300px;
+  }
   .sobre p {
     text-align: center;
+    width: 320px;
     font-size: 1rem;
   }
   .suporte {
     text-align: center;
   }
+  .area-de-envio {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 10px;
+    width: 620px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  #email {
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    line-height: 0;
+    font-size: 1.5rem;
+  }
+
+  input[type="text"] {
+    height: 100px;
+    width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+  }
 }
-@media only screen and (max-width: 1024px) {
+
+@media only screen and (max-width: 1280px) {
+  .image-float img {
+    width: 180px;
+    position: relative;
+    animation: mymove 5s infinite;
+  }
 }
