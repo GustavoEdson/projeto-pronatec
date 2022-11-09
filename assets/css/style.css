@@ -6,9 +6,18 @@
   height: 80vh;
 }
 
+.carousel-item img {
+  width: 400px;
+  margin-top: 100px;
+}
+.first img {
+  width: 410px;
+  height: 420px;
+}
 .carro {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 #carouselExampleCaptions {
@@ -16,19 +25,20 @@
   align-items: center;
 }
 
-.conteudo p {
+/* .conteudo p {
   text-align: center;
   font-size: 1.2rem;
   font-weight: 700;
-  width: 450px;
+  width: 220px;
   line-height: 30px;
-}
+} */
 
-.conteudo img {
-  width: 50%;
-}
+/* .conteudo img {
+  width: 1000px;
+} */
 
 h1 {
+  position: relative;
   text-align: center;
   font-size: 1.7rem;
   font-weight: 700;
@@ -38,8 +48,11 @@ h1 {
   border-radius: 10px;
 }
 
-.produtos-ios p,
-span {
+.content-box button {
+  margin-left: 15px;
+}
+
+.content-box p {
   width: 300px;
   text-align: center;
 }
@@ -48,11 +61,11 @@ span {
   margin-top: 50px;
   display: flex;
   justify-content: space-around;
-  /* line-height: 30px; */
+  line-height: 30px;
 }
 
 .produtos-ios img {
-  width: 7%;
+  width: 60%;
 }
 
 .produtos-android {
@@ -60,7 +73,7 @@ span {
   display: flex;
   justify-content: space-around;
   /* line-height: 30px; */
-  /* gap: 1rem; */
+  gap: 1rem;
 }
 
 .produtos-android button,
