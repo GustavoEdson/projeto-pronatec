@@ -8,7 +8,7 @@
 
 .carousel-item img {
   width: 400px;
-  margin-top: 100px;
+  margin-top: 120px;
 }
 .first img {
   width: 410px;
@@ -43,8 +43,8 @@ h1 {
   text-align: center;
   font-size: 1.7rem;
   font-weight: 700;
-  background-color: #003840;
-  color: #f88f06;
+  background: linear-gradient(to left, #0008ff 0%, #8300b3 100%);
+  color: #ffff;
   padding: 10px;
   border-radius: 10px;
 }
@@ -58,28 +58,19 @@ h1 {
   text-align: center;
 }
 
-.produtos-ios {
+.produtos-content {
   margin-top: 50px;
   display: flex;
   justify-content: space-around;
   line-height: 30px;
 }
 
-.produtos-ios img {
+.produtos-content img {
   width: 60%;
 }
 
-.produtos-android {
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-around;
-  /* line-height: 30px; */
-  gap: 1rem;
-}
-
-.produtos-android button,
-.produtos-ios button {
-  background: #f88f06;
+.produtos-content button {
+  background: linear-gradient(to left, #0008ff 0%, #8300b3 100%);
   border: none;
   border-radius: 5px;
   padding: 10px;
@@ -89,9 +80,8 @@ h1 {
   color: white;
 }
 
-.produtos-android button:hover,
-.produtos-ios button:hover {
-  background: #003840;
+.produtos-content button:hover {
+  background: linear-gradient(to bottom right, #3366ff 0%, #ff0000 100%);
   color: white;
 }
 
@@ -112,8 +102,15 @@ article span {
 /* Animação da logo */
 .image-float img {
   width: 250px;
+  background: linear-gradient(to left, #0008ff 0%, #8300b3 100%);
+  border-radius: 50%;
   position: relative;
   animation: mymove 5s infinite;
+}
+
+.image-float img:hover {
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.307);
+  transition: all ease-in-out 0.3s;
 }
 
 @keyframes mymove {
@@ -143,9 +140,6 @@ article span {
   width: 600px;
 }
 
-.sobre-texto p:hover {
-}
-
 .suporte {
   display: flex;
   justify-content: center;
@@ -169,6 +163,15 @@ article span {
 
 .area-de-envio button {
   margin-top: 10px;
+  background: linear-gradient(to left, #0008ff 0%, #8300b3 100%);
+  color: #ffff;
+  padding: 20px 60px 20px 60px;
+  border: none;
+  border-radius: 5px;
+}
+
+.area-de-envio button:hover {
+  background: linear-gradient(to bottom right, #3366ff 0%, #ff0000 100%);
 }
 
 .area-de-envio:hover {
@@ -190,18 +193,8 @@ input[type="text"] {
   padding: 10px;
 }
 
-form button {
-  border-radius: 10px;
-  outline: #003840;
-  padding: 30px;
-  padding-left: 50px;
-  padding-right: 50px;
-  line-height: 0;
-  font-size: 1.5rem;
-}
-
 /* Responsivo */
-@media only screen and (max-width: 717px) {
+@media only screen and (max-width: 600px) {
   .conteudo p {
     text-align: center;
     font-size: 1.6rem;
@@ -210,23 +203,23 @@ form button {
   .conteudo img {
     width: 70%;
   }
-  .produtos-ios {
+  .produtos-content {
     display: flex;
     flex-direction: column;
     align-items: space-around;
   }
-  .produtos-ios img {
+  .produtos-content img {
     width: 60%;
   }
-  .produtos-android img {
+  .produtos-content img {
     width: 60%;
   }
-  .produtos-android {
+  .produtos-content {
     display: flex;
     flex-direction: column;
   }
   .image-float img {
-    width: 80px;
+    width: 410px;
     position: relative;
     animation: mymove 5s infinite;
   }
