@@ -16,27 +16,12 @@
 }
 
 .carro {
+  position: relative;
   display: flex;
   justify-content: center;
   width: 100%;
+  z-index: 0;
 }
-
-#carouselExampleCaptions {
-  display: flex;
-  align-items: center;
-}
-
-/* .conteudo p {
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: 700;
-  width: 220px;
-  line-height: 30px;
-} */
-
-/* .conteudo img {
-  width: 1000px;
-} */
 
 h1 {
   position: relative;
@@ -52,6 +37,14 @@ h1 {
 .content-box button {
   margin-left: 15px;
 }
+.content-box {
+  display: flex;
+  justify-content: space-around;
+  border: solid 1px #0008ff;
+  border-radius: 5px;
+  padding: 2%;
+  align-items: center;
+}
 
 .content-box p {
   width: 300px;
@@ -59,14 +52,18 @@ h1 {
 }
 
 .produtos-content {
+  display: flex;
   margin-top: 50px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   line-height: 30px;
+  gap: 2em;
+  width: 100%;
+  margin-bottom: 50px;
 }
 
 .produtos-content img {
-  width: 60%;
+  width: 40%;
 }
 
 .produtos-content button {
@@ -82,7 +79,6 @@ h1 {
 
 .produtos-content button:hover {
   background: linear-gradient(to bottom right, #3366ff 0%, #ff0000 100%);
-  color: white;
 }
 
 article {
@@ -91,12 +87,6 @@ article {
 
 article p {
   font-size: 3rem;
-}
-
-article span {
-  color: #003840;
-  background-color: #f88f06;
-  font-size: 2em;
 }
 
 /* Animação da logo */
@@ -171,7 +161,7 @@ article span {
 }
 
 .area-de-envio button:hover {
-  background: linear-gradient(to bottom right, #3366ff 0%, #ff0000 100%);
+  background: #1639a1;
 }
 
 .area-de-envio:hover {
@@ -195,24 +185,19 @@ input[type="text"] {
 
 /* Responsivo */
 @media only screen and (max-width: 600px) {
-  .conteudo p {
-    text-align: center;
-    font-size: 1.6rem;
-    width: 400px;
-  }
-  .conteudo img {
-    width: 70%;
-  }
   .produtos-content {
     display: flex;
+    gap: 5em;
     flex-direction: column;
     align-items: space-around;
   }
-  .produtos-content img {
-    width: 60%;
+  .content-box {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2em;
   }
   .produtos-content img {
-    width: 60%;
+    width: 50%;
   }
   .produtos-content {
     display: flex;
