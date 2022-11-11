@@ -1,4 +1,4 @@
-.conteudo {
+conteudo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,7 +78,7 @@ h1 {
 }
 
 .produtos-content button:hover {
-  background: linear-gradient(to bottom right, #3366ff 0%, #ff0000 100%);
+  background: linear-gradient(to bottom right, #527dff 100% 0%, #527dff 100%);
 }
 
 article {
