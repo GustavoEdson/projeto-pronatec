@@ -1,274 +1,87 @@
-.conteudo {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+nav {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 80vh;
-}
-
-.carousel-item img {
-  width: 400px;
-  margin-top: 120px;
-}
-.first img {
-  width: 410px;
-  height: 420px;
-}
-
-.carro {
-  position: relative;
-  display: flex;
-  justify-content: center;
+  height: 80px;
   width: 100%;
-  z-index: 0;
-}
-
-h1 {
-  position: relative;
-  text-align: center;
-  font-size: 1.7rem;
-  font-weight: 700;
   background: linear-gradient(to left, #0008ff 0%, #8300b3 100%);
-  color: #ffff;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.content-box button {
-  margin-left: 15px;
-}
-.content-box {
-  display: flex;
-  justify-content: space-around;
-  border: solid 1px #0008ff;
-  border-radius: 5px;
-  padding: 2%;
   align-items: center;
-}
-
-.content-box p {
-  width: 300px;
-  text-align: center;
-}
-
-.produtos-content {
-  display: flex;
-  margin-top: 50px;
-  display: flex;
   justify-content: space-between;
-  line-height: 30px;
-  gap: 2em;
-  width: 100%;
-  margin-bottom: 50px;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+  position: fixed;
+  z-index: 1;
 }
 
-.produtos-content img {
-  width: 40%;
+.logo img {
+  width: 5.4em;
 }
 
-.produtos-content button {
-  background: linear-gradient(to left, #0008ff 0%, #8300b3 100%);
-  border: none;
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
   border-radius: 5px;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 1em;
-  transition: ease-in-out 0.4s;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  background: linear-gradient(to left, #0008ff 0%, #8300b3 100%);
   color: white;
 }
 
-.produtos-content button:hover {
-  background: linear-gradient(to bottom right, #3366ff 0%, #ff0000 100%);
+nav .menu-btn i {
+  color: #fff;
+  cursor: pointer;
+  display: none;
 }
 
-article {
-  height: 43vh;
-}
-
-article p {
-  font-size: 3rem;
-}
-
-/* Animação da logo */
-.image-float img {
-  width: 250px;
-  background: linear-gradient(to left, #0008ff 0%, #8300b3 100%);
-  border-radius: 50%;
-  position: relative;
-  animation: mymove 5s infinite;
-}
-
-.image-float img:hover {
-  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.307);
-  transition: all ease-in-out 0.3s;
-}
-
-@keyframes mymove {
-  0% {
-    top: 0px;
+@media (max-width: 920px) {
+  nav .menu-btn i {
+    display: block;
   }
-  25% {
-    top: 50px;
-  }
-  75% {
-    top: 100px;
-  }
-  100% {
-    top: 0px;
-  }
-}
-
-.sobre {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.sobre p {
-  text-align: center;
-  font-size: 1.2rem;
-  width: 600px;
-}
-
-.suporte {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.area-de-envio {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  font-size: 1.5rem;
-  border-radius: 10px;
-  padding: 10px;
-  width: 640px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  transition: all 0.5s;
-}
-
-.area-de-envio button {
-  margin-top: 10px;
-  background: linear-gradient(to left, #0008ff 0%, #8300b3 100%);
-  color: #ffff;
-  padding: 20px 60px 20px 60px;
-  border: none;
-  border-radius: 5px;
-}
-
-.area-de-envio button:hover {
-  background: #1639a1;
-}
-
-.area-de-envio:hover {
-  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.528);
-}
-
-#email {
-  border-radius: 10px;
-  padding: 10px;
-  width: 500px;
-  line-height: 0;
-  font-size: 1.5rem;
-}
-
-input[type="text"] {
-  height: 200px;
-  width: 500px;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-/* Responsivo */
-@media only screen and (max-width: 600px) {
-  .produtos-content {
-    display: flex;
-    gap: 5em;
-    flex-direction: column;
-    align-items: space-around;
-  }
-  .content-box {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 2em;
-  }
-  .produtos-content img {
-    width: 50%;
-  }
-  .produtos-content {
-    display: flex;
-    flex-direction: column;
-  }
-  .image-float img {
-    width: 410px;
-    position: relative;
-    animation: mymove 5s infinite;
-  }
-
-  @keyframes mymove {
-    0% {
-      left: 0px;
-    }
-    25% {
-      left: 50px;
-    }
-    75% {
-      left: 100px;
-    }
-    100% {
-      left: 0px;
-    }
-  }
-  .sobre {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 300px;
-  }
-  .sobre p {
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: linear-gradient(to left, #0008ff 0%, #8300b3 100%);
+    height: 100vh;
+    width: 100%;
     text-align: center;
-    width: 320px;
-    font-size: 1rem;
+    display: block;
+    transition: all 0.3s ease;
   }
-  .suporte {
-    text-align: center;
+  nav ul.open {
+    left: 0;
   }
-  .area-de-envio {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    padding: 10px;
-    width: 620px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+  nav ul li {
+    width: 100%;
+    margin: 50px 0;
   }
-  #email {
-    border-radius: 10px;
-    padding: 10px;
-    width: 300px;
-    line-height: 0;
-    font-size: 1.5rem;
+  nav ul li a {
+    font-size: 23px;
   }
-
-  input[type="text"] {
-    height: 100px;
-    width: 300px;
-    border-radius: 10px;
-    padding: 10px;
-  }
-}
-
-@media only screen and (max-width: 1280px) {
-  .image-float img {
-    width: 180px;
-    position: relative;
-    animation: mymove 5s infinite;
+  nav ul li a.active,
+  nav ul li a:hover {
+    background: none;
+    background: linear-gradient(to bottom right, #3366ff 0%, #ff0000 100%);
   }
 }
